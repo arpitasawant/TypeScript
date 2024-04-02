@@ -1,22 +1,17 @@
-interface TakePhoto{
-    cameraMode:string,
-    filter:string,
-    burst:number
-}
-
-class Instagram implements TakePhoto{
-    constructor{
-        public cameraMode:string;
-        public filter:string,
-        public burst:number
-    }{}
-}
-
-class Youtube implements TakePhoto{
-    constructor(
-        public cameraMode:string;
-        public filter:string,
-        public burst:number,
-        public short:string
-    )
-}
+var Instagram = /** @class */ (function () {
+    function Instagram(cameraMode, filter, burst) {
+        this.cameraMode = cameraMode;
+        this.filter = filter;
+        this.burst = burst;
+    }
+    return Instagram;
+}());
+var Youtube = /** @class */ (function () {
+    function Youtube(cameraMode, filter, burst, short) {
+        this.cameraMode = cameraMode;
+        this.filter = filter;
+        this.burst = burst;
+        this.short = short;
+    }
+    return Youtube;
+}());
