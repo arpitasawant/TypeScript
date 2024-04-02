@@ -28,9 +28,15 @@ interface Bottle{
 
 // identityFour<Bottle>({brand:"zara",type:3})
 
+// Generic in array and arrow function
 function getSearchProducts<T>(products:T[]):T{
 
     // some database operations
     const myIndex =3
+    return products[myIndex]
+}
+
+const getMore = <T,>(products:T[]): T=> {
+    const myIndex = 4
     return products[myIndex]
 }

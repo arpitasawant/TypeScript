@@ -14,4 +14,14 @@ function identityThree(val) {
 function identityFour(val) {
     return val;
 }
-identityFour({ brand: "zara", type: 3 });
+// identityFour<Bottle>({brand:"zara",type:3})
+// Generic in array and arrow function
+function getSearchProducts(products) {
+    // some database operations
+    var myIndex = 3;
+    return products[myIndex];
+}
+var getMore = function (products) {
+    var myIndex = 4;
+    return products[myIndex];
+};
