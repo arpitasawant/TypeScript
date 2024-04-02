@@ -102,12 +102,26 @@ interface Rectangle{
     width:number
 }
 
-type Shape = Circle | Square
+type Shape = Circle | Square | Rectangle
 
 function getShape(shape:Shape){
     if(shape.kind === "Circle"){
        return Math.PI * shape.radius ** 2;
     }
 
-    return shape.side*shape.side
+    // return shape.side*shape.side
+}
+
+function getArea(shape:Shape){
+    switch(shape.kind){
+        case "Circle":
+            return Math.PI * shape.radius ** 2;
+        case "Square":
+            return shape.side*shape.side
+        case "rectangle":
+            return shape.length*shape.width
+        default:
+            const _defaultShape : never = shape
+            return _defaultShape
+    }
 }

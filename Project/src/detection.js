@@ -52,3 +52,17 @@ function getFood(pet) {
         return "bird";
     }
 }
+function getShape(shape) {
+    if (shape.kind === "Circle") {
+        return Math.PI * Math.pow(shape.radius, 2);
+    }
+    return shape.side * shape.side;
+}
+function getArea(shape) {
+    switch (shape.kind) {
+        case "Circle":
+            return Math.PI * Math.pow(shape.radius, 2);
+        case "Square":
+            return shape.side * shape.side;
+    }
+}
