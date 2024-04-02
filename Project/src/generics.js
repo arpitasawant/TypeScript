@@ -25,3 +25,19 @@ var getMore = function (products) {
     var myIndex = 4;
     return products[myIndex];
 };
+function anotherFun(valOne, valTwo) {
+    return {
+        valOne: valOne,
+        valTwo: valTwo
+    };
+}
+// Generic Classes
+var Sellable = /** @class */ (function () {
+    function Sellable() {
+        this.cart = [];
+    }
+    Sellable.prototype.addToCart = function (product) {
+        this.cart.push(product);
+    };
+    return Sellable;
+}());

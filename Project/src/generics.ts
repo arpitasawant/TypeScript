@@ -40,3 +40,37 @@ const getMore = <T,>(products:T[]): T=> {
     const myIndex = 4
     return products[myIndex]
 }
+
+interface Datbase{
+    connection:string,
+    username:string,
+    password:string
+}
+function anotherFun<T,U extends Datbase>(valOne:T,valTwo:U):object{
+    return{
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFun(3,{});
+
+interface Quiz{
+    name:string,
+    type:string
+}
+
+interface Course{
+    name:string,
+    author:string,
+    subject:string
+}
+
+// Generic Classes
+class Sellable<T>{
+    public cart:T[] = []
+
+    addToCart(product:T){
+        this.cart.push(product)
+    }
+}
