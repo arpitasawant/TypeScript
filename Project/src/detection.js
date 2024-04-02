@@ -56,7 +56,7 @@ function getShape(shape) {
     if (shape.kind === "Circle") {
         return Math.PI * Math.pow(shape.radius, 2);
     }
-    return shape.side * shape.side;
+    // return shape.side*shape.side
 }
 function getArea(shape) {
     switch (shape.kind) {
@@ -64,5 +64,10 @@ function getArea(shape) {
             return Math.PI * Math.pow(shape.radius, 2);
         case "Square":
             return shape.side * shape.side;
+        case "rectangle":
+            return shape.length * shape.width;
+        default:
+            var _defaultShape = shape;
+            return _defaultShape;
     }
 }
