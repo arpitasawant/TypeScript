@@ -1,8 +1,13 @@
-var data3 = { dbId: 22, email: "sg@gmail", userId: 1313, googleId: "32",
+var data3 = {
+    dbId: 22,
+    role: "admin",
+    email: "",
+    userId: 0,
     startTrail: function () {
-        return "trail started";
+        throw new Error("Function not implemented.");
     },
-    getCoupon: function (name, off) {
-        return 10;
-    }
+    githubToken: ""
 };
+// diff between interface and type aliases
+// Interface:Adding new fields to an existing interface
+// Type: A type cannot be changed after being created

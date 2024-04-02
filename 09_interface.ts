@@ -1,25 +1,35 @@
-interface UserData{
-
-    readonly dbId : number,
-    email:string,
-    userId:number,
+interface UserData {
+    readonly dbId: number,
+    email: string,
+    userId: number,
     googleId?: string,
-    startTrail :()=> string
+    startTrail: () => string
     // another way
     // startTrail() : string
-    getCoupon(couponname: string, value: number): number
+    // getCoupon(couponname: string, value: number): number
 }
 
-const data3 :UserData = {dbId:22,email:"sg@gmail",userId:1313,googleId:"32"
-,
-startTrail:()=>{
-    return "trail started"
+interface UserData {
+    githubToken: string
 }
-,
-getCoupon:(name:"arpita",off:10)=>{
-    return 10;
+
+interface AdminData extends UserData {
+    role: "admin" | "ta" | "learner"
 }
-};
 
+const data3: AdminData = {
+    dbId: 22,
+    role: "admin",
+    email: "",
+    userId: 0,
+    startTrail: function (): string {
+        throw new Error("Function not implemented.")
+    },
+    githubToken: ""
+}
+   
 
+// diff between interface and type aliases
 
+// Interface:Adding new fields to an existing interface
+// Type: A type cannot be changed after being created
