@@ -31,7 +31,20 @@ function printAll(strs: string | string[] | null) {
     }
 }
 
+// in operator
 interface User{
-    name:string,
+    username:string,
     email:string
+}
+
+interface Admin{
+    username:string,
+    email:string,
+    isAdmin:boolean
+}
+
+function isAdminAccount(account : User | Admin){
+    if("isAdmin" in account){
+        return account.isAdmin
+    }
 }
