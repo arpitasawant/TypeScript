@@ -83,3 +83,31 @@ function getFood(pet:Fish|Bird){
 }
 
 }
+
+// Discriminated Union and Exhaustiveness Checking with never
+
+interface Circle{
+    kind:"Circle",
+    radius:number
+}
+
+interface Square{
+    kind:"Square",
+    side:number
+}
+
+interface Rectangle{
+    kind:"rectangle",
+    length:number,
+    width:number
+}
+
+type Shape = Circle | Square
+
+function getShape(shape:Shape){
+    if(shape.kind === "Circle"){
+       return Math.PI * shape.radius ** 2;
+    }
+
+    return shape.side*shape.side
+}
