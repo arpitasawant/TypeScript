@@ -18,3 +18,10 @@ createUser(newUser);
 function createCourse() {
     return { name: "reactjs", price: 399 };
 }
+var myUser = {
+    _id: "123",
+    name: "a",
+    email: "a@gmail.com",
+    isActive: true
+};
+myUser.email = "a@gmail.com";
